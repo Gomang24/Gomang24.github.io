@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>赵嘉程 · 嵌入式软件工程师</title>
+  <meta name="description" content="赵嘉程的个人主页：嵌入式软件工程师，西安邮电大学计算机科学与技术本科，从事量子随机数设备的 SDK、固件与 Linux 服务开发。" />
+  <meta name="author" content="赵嘉程" />
+  <meta name="theme-color" content="#f6f7fb" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- 社交分享卡片（把 URL 换成你的站点地址） -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="赵嘉程 · 嵌入式软件工程师" />
+  <meta property="og:description" content="C/C++、Linux、SDK 与固件开发；量子随机数设备研发经历。" />
+  <meta property="og:url" content="https://gomang24.github.io/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- 如果访客关闭了 JavaScript，也要能正常看到全部内容 -->
+  <noscript>
+    <style>
+      .reveal { opacity: 1 !important; transform: none !important; }
+      .nav { position: static !important; opacity: 1 !important; visibility: visible !important; }
+    </style>
+  </noscript>
+
+  <!-- 尽早确定配色，避免刷新时白屏闪烁 -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = saved || (systemDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+        document.querySelector('meta[name="theme-color"]')
+          .setAttribute('content', theme === 'dark' ? '#0b0f19' : '#f6f7fb');
+      } catch (e) { /* 忽略隐私模式下的存储异常 */ }
+    })();
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="返回顶部">
+        <span class="brand-mark">Z</span>
+        <span class="brand-text">赵嘉程</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="主导航">
+        <a href="#about">关于</a>
+        <a href="#projects">项目</a>
+        <a href="#experience">经历</a>
+        <a href="#contact">联系</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="切换深色模式" title="切换深色模式">
+          <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2"></circle>
+            <path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M18.9 5.1l-1.6 1.6M6.7 17.3l-1.6 1.6"></path>
+          </svg>
+          <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 14.2A8.2 8.2 0 1 1 9.8 4a6.7 6.7 0 0 0 10.2 10.2z"></path>
+          </svg>
+        </button>
+
+        <a class="btn btn-primary btn-sm header-cta" href="#contact">聊一聊</a>
+
+        <button class="icon-btn menu-btn" id="menuToggle" type="button"
+                aria-label="打开菜单" aria-expanded="false" aria-controls="nav">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ Hero ============ -->
+    <section class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="pulse-dot"></span>目前在西安 · 开放嵌入式 / 软件开发岗位机会</p>
+
+          <h1 class="hero-title">
+            你好，我是<span class="grad">赵嘉程</span><br />
+            一名<span class="underline-mark">嵌入式软件工程师</span>
+          </h1>
+
+          <p class="lead">
+            做过量子随机数设备的 SDK、固件与 Linux 服务，也独立实现过 800 亿级数据的查重算法。
+            习惯从 u-boot、内核、设备树一路调到用户态，把「能跑」推进到「跑得稳、跑得快」。
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">
+              查看项目
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h13M13 6l6 6-6 6"></path>
+              </svg>
+            </a>
+            <a class="btn btn-ghost" href="assets/resume.pdf" target="_blank" rel="noopener">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3v11M7.5 9.5 12 14l4.5-4.5M4 17.5V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1.5"></path>
+              </svg>
+              下载简历
+            </a>
+          </div>
+
+          <ul class="socials" aria-label="联系方式">
+            <li>
+              <a href="mailto:307782393@qq.com" aria-label="发送邮件">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="2.8" y="5" width="18.4" height="14" rx="2.6"></rect>
+                  <path d="m3.6 6.8 8.4 6 8.4-6"></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="assets/resume.pdf" target="_blank" rel="noopener" aria-label="下载 PDF 简历">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M14 3H7.4A2.4 2.4 0 0 0 5 5.4v13.2A2.4 2.4 0 0 0 7.4 21h9.2a2.4 2.4 0 0 0 2.4-2.4V8z"></path>
+                  <path d="M14 3v5h5M8.5 13h7M8.5 16.5h4.5"></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <aside class="hero-card" aria-label="个人名片">
+          <div class="hero-card-top">
+            <img class="avatar" src="assets/avatar.svg" width="112" height="112" alt="赵嘉程的头像" />
+            <div>
+              <p class="hero-card-name">赵嘉程</p>
+              <p class="hero-card-role">Embedded Software Engineer</p>
+              <p class="hero-card-loc">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"></path>
+                  <circle cx="12" cy="10" r="2.6"></circle>
+                </svg>
+                陕西 · 西安
+              </p>
+            </div>
+          </div>
+
+          <div class="chip-row">
+            <span class="chip">C / C++</span>
+            <span class="chip">Linux</span>
+            <span class="chip">SDK 开发</span>
+          </div>
+
+          <div class="hero-card-stats">
+            <div>
+              <strong>1.5年</strong>
+              <span>研发经验</span>
+            </div>
+            <div>
+              <strong>4+</strong>
+              <span>项目</span>
+            </div>
+            <div>
+              <strong>800亿</strong>
+              <span>数据查重</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ 关于 ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker">01 — 关于我</p>
+          <h2 class="section-title">从电路图到内核，再到用户态</h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              我是赵嘉程，2021 年毕业于西安邮电大学计算机科学与技术专业，2022 年加入浙江九州量子，
+              做量子随机源设备的软件研发：写客户端 SDK、维护设备服务程序、改设备树与固件、做性能调优。
+            </p>
+            <p>
+              我的工作常常横跨好几层——上到 Qt / Windows 客户端与密钥管理系统网页，下到 u-boot、kernel、
+              文件系统和 USB 固件。我比较擅长把一件事从「能跑」推到「跑得稳、跑得快」：
+              曾把设备输出极限速率提升约 15%，也把 800 亿条数据的查重从 8～10 小时压到 3.5 小时。
+            </p>
+            <p>
+              性格上偏踏实：做事讲条理，习惯先整理文档再动手；抗压能力不错，遇到问题愿意一层层往下查。
+              业余喜欢摄影、篮球和跑步。
+            </p>
+            <p class="about-note">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M12 8h.01M11 12h1v4h1"></path>
+              </svg>
+              目前在西安，主要看嵌入式软件、Linux 开发方向的机会；也欢迎技术交流。
+            </p>
+          </div>
+
+          <div class="skills reveal" aria-label="技能">
+            <div class="skill-group">
+              <p class="skill-label">语言基础</p>
+              <ul class="chip-row">
+                <li class="chip">C</li>
+                <li class="chip">C++</li>
+                <li class="chip">Java</li>
+                <li class="chip">Shell</li>
+                <li class="chip">SQL</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <p class="skill-label">系统与网络</p>
+              <ul class="chip-row">
+                <li class="chip">Linux</li>
+                <li class="chip">多线程</li>
+                <li class="chip">进程间通信</li>
+                <li class="chip">Socket 编程</li>
+                <li class="chip">libevent / Reactor</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <p class="skill-label">工程与工具</p>
+              <ul class="chip-row">
+                <li class="chip">Make / CMake</li>
+                <li class="chip">Git</li>
+                <li class="chip">u-boot / 内核 / 设备树</li>
+                <li class="chip">动态库封装</li>
+                <li class="chip">Visio / Markdown</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 项目 ============ -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker">02 — 项目经历</p>
+          <h2 class="section-title">三个我投入最多的项目</h2>
+          <p class="section-desc">都来自实际产品研发，具体细节可以邮件聊或者在面试里展开。</p>
+        </header>
+
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <div class="project-visual visual-a" aria-hidden="true">
+              <span class="pv-bar"></span><span class="pv-bar"></span><span class="pv-bar"></span>
+              <span class="pv-chart"></span>
+            </div>
+            <div class="project-body">
+              <div class="project-head">
+                <h3>高速量子随机数发生器</h3>
+                <span class="project-year">2022.07 – 2023.09</span>
+              </div>
+              <p>
+                设备输出速率优化：分段测试数据传输链路、定位瓶颈并调参，把极限速率提升约 15%、平均速率提升约 20%。
+                同时开发多版本客户端 SDK（含 Windows 版）与 JNI 封装，完成长连接改造与心跳保活，并实现设备健康状态、
+                固件状态检测。
+              </p>
+              <ul class="chip-row chip-sm">
+                <li class="chip">C / C++</li>
+                <li class="chip">Linux</li>
+                <li class="chip">SDK / JNI</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-visual visual-b" aria-hidden="true">
+              <span class="pv-line"></span><span class="pv-line short"></span>
+              <span class="pv-line"></span><span class="pv-line tiny"></span>
+            </div>
+            <div class="project-body">
+              <div class="project-head">
+                <h3>光量子随机数发生器</h3>
+                <span class="project-year">2022.04 – 2022.07</span>
+              </div>
+              <p>
+                对设备做整体原理性探究：拆解分析电路与固件资源，基于 Cypress 官方文档与工具研究 USB 通信、
+                确定传输端点，完成固件替换并保证设备运行正常；梳理相关技术文档、论文与专利，向上级做预研汇报。
+              </p>
+              <ul class="chip-row chip-sm">
+                <li class="chip">USB</li>
+                <li class="chip">固件分析</li>
+                <li class="chip">预研</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-visual visual-c" aria-hidden="true">
+              <span class="pv-dot"></span><span class="pv-dot"></span>
+              <span class="pv-dot"></span><span class="pv-square"></span>
+            </div>
+            <div class="project-body">
+              <div class="project-head">
+                <h3>大数据量纯 k 查重工具</h3>
+                <span class="project-year">2023.07 – 2023.08</span>
+              </div>
+              <p>
+                依据国家标准中对大数据量纯 k 查重的定义，独立设计并实现查重与定位算法，完成 800 亿条样本的处理；
+                解决大小端、样本提取、快速查重、比特流定位与结果筛选等问题，设计样本结构以支持 k 值变化。
+                整体耗时 3.5 小时（原非纯 k 算法 8～10 小时），存储占用减少 200G。
+              </p>
+              <ul class="chip-row chip-sm">
+                <li class="chip">C / C++</li>
+                <li class="chip">算法</li>
+                <li class="chip">数据结构</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <p class="project-note reveal">
+          除此之外还参与过：密钥管理系统网页开发与国密算法访问改造、客户端 SDK 接口与通信模块开发、
+          可信平台模块与 5G RedCap 技术预研、设备生产资源整理与固件打包烧写流程。
+          本科毕业设计为《基于三维卷积神经网络的遥感图像分析及系统设计》（Indian Pines 高光谱数据集分类）。
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ 经历 ============ -->
+    <section class="section" id="experience">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-kicker">03 — 工作与教育</p>
+          <h2 class="section-title">一路写过来的这几年</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <p class="timeline-date">2022.04 — 2023.09</p>
+            <h3>软件工程师 · 浙江九州量子信息技术股份有限公司</h3>
+            <p>
+              负责公司量子随机源项目的开发与维护：优化设备服务程序、提升性能与稳定性、制作多平台 SDK。
+              作为主要开发人员独立完成多个版本的 SDK，并做不同平台与语言的适配；独立完成设备输出速率提速任务，
+              将速率提升约 20%，相关密钥管理系统完成适配与维护。
+              同时承担部门产品与技术预研：整理资料、分析技术应用前景与政策支持，独立完成可信平台模块与 5G RedCap 调研汇报。
+            </p>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <p class="timeline-date">2017.09 — 2021.06</p>
+            <h3>本科 · 西安邮电大学 · 计算机科学与技术</h3>
+            <p>
+              计算机学院计算机科学与技术专业，GPA 3.08（专业前 30%）；获 2017–2018 学年度国家励志奖学金。
+              在校期间担任计算机科学与技术 1704 班心理委员、软件 1902 班新生班主任，并加入 CreateShare 实验室前端开发小组。
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ 联系 ============ -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="contact-card reveal">
+          <div class="contact-copy">
+            <p class="section-kicker">04 — 联系我</p>
+            <h2 class="section-title">在找工作，<br />也欢迎聊聊技术。</h2>
+            <p class="section-desc">
+              目前开放嵌入式软件、Linux 开发方向的岗位机会，base 西安或可远程。
+              邮件联系最快，看到就会回复；也可以直接下载 PDF 简历。
+            </p>
+          </div>
+
+          <div class="contact-actions">
+            <a class="contact-row" href="mailto:307782393@qq.com">
+              <span class="contact-icon">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="2.8" y="5" width="18.4" height="14" rx="2.6"></rect>
+                  <path d="m3.6 6.8 8.4 6 8.4-6"></path>
+                </svg>
+              </span>
+              <span class="contact-meta">
+                <span class="contact-label">邮箱</span>
+                <span class="contact-value">307782393@qq.com</span>
+              </span>
+              <svg class="icon contact-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+            </a>
+
+            <a class="contact-row" href="assets/resume.pdf" target="_blank" rel="noopener">
+              <span class="contact-icon">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M14 3H7.4A2.4 2.4 0 0 0 5 5.4v13.2A2.4 2.4 0 0 0 7.4 21h9.2a2.4 2.4 0 0 0 2.4-2.4V8z"></path>
+                  <path d="M14 3v5h5M8.5 13h7M8.5 16.5h4.5"></path>
+                </svg>
+              </span>
+              <span class="contact-meta">
+                <span class="contact-label">简历</span>
+                <span class="contact-value">下载 PDF 版简历</span>
+              </span>
+              <svg class="icon contact-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> 赵嘉程 · 用原生 HTML / CSS / JS 手写</p>
+      <p class="footer-note">托管于 GitHub Pages</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <button class="to-top" id="toTop" type="button" aria-label="回到顶部">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V6M6 12l6-6 6 6"></path></svg>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
